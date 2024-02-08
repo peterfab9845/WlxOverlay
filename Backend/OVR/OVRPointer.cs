@@ -67,7 +67,7 @@ public class OVRPointer : BaseOverlay, IPointer
         Transform = Transform.ScaledLocal(new Vector3(1, _length / WidthInMeters, 1));
 
         // billboard towards hmd
-        /*var viewDirection = _handTransform.origin - hmd.origin;
+        var viewDirection = _handTransform.origin - hmd.origin;
 
         const float step = Mathf.Pi / 3f;
 
@@ -84,7 +84,7 @@ public class OVRPointer : BaseOverlay, IPointer
             }
         }
 
-        Transform = Transform.RotatedLocal(Vector3.Up, step * bestAt);*/
+        Transform = Transform.RotatedLocal(Vector3.Up, step * bestAt);
 
         UploadTransform();
     }
